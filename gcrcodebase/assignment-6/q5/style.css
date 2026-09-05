@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.plan {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s;
+  animation: fadeIn 0.6s ease both;
+}
+
+.plan:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.plan:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.plan:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.plan:hover {
+  transform: translateY(-10px);
+}
+
+.plan.featured {
+  background: #1f2937;
+  color: #ffffff;
+  width: 250px;
+  padding: 2.5rem 1.75rem;
+}
+
+.plan h2 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0 1rem;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 750px) {
+  .pricing {
+    flex-direction: column;
+  }
+
+  .plan,
+  .plan.featured {
+    width: 100%;
+    max-width: 320px;
+  }
+}
